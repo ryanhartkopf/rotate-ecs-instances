@@ -64,8 +64,7 @@ func main() {
   }
 
   // Loop over list of container instances
-  i := 0
-  for i < len(containerInstances.ContainerInstanceArns) {
+  for i := 0; i < len(containerInstances.ContainerInstanceArns); i++ {
 
     // Set variables
     count := 0
@@ -145,8 +144,5 @@ func main() {
     } else {
       fmt.Println("Terminated instance", *instanceId)
     }
-
-    // Increment for loop index
-    i++
   }
 }
